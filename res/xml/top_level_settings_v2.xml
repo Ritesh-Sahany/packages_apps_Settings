@@ -21,6 +21,18 @@
     android:key="top_level_settings">
 
     <PreferenceCategory
+        android:order="-140"
+        android:key="top_level_beyond_ordinary"
+        android:layout="@layout/settingslib_preference_category_no_title">
+        <com.android.settings.widget.HomepagePreference
+            android:icon="@drawable/ic_beyond_ordinary"
+            android:title="@string/beyond_dashboard_title"
+            android:summary="@string/beyond_dashboard_summary"
+            android:fragment="com.beyond.ordinary.BeyondDashboard"
+            settings:controller="com.beyond.ordinary.TopLevelExtensionsEntryPreferenceController" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:order="-130"
         android:key="top_level_connectivity_category"
         android:layout="@layout/settingslib_preference_category_no_title">
